@@ -14,7 +14,6 @@ class WeatherSliverAppBar extends StatelessWidget {
     return SliverAppBar(
       pinned: true,
       stretch: true,
-      onStretchTrigger: onRefresh,
       backgroundColor: Colors.blue[300],
       expandedHeight: 200.0,
       flexibleSpace: FlexibleSpaceBar(
