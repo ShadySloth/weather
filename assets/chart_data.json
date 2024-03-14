@@ -1,0 +1,33 @@
+{
+  "latitude": 52.52,
+  "longitude": 13.419998,
+  "generationtime_ms": 0.03600120544433594,
+  "utc_offset_seconds": 3600,
+  "timezone": "Europe/Berlin",
+  "timezone_abbreviation": "CET",
+  "elevation": 38.0,
+  "daily_units": {
+    "time": "iso8601",
+    "rain_sum": "mm"
+  },
+  "daily": {
+    "time": [
+      "2024-03-14",
+      "2024-03-15",
+      "2024-03-16",
+      "2024-03-17",
+      "2024-03-18",
+      "2024-03-19",
+      "2024-03-20"
+    ],
+    "rain_sum": [
+      0.00,
+      1.00,
+      0.90,
+      0.00,
+      3.00,
+      0.00,
+      0.00
+    ]
+  }
+}

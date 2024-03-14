@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather/models.dart';
+import 'package:weather/models/forecast.dart';
 
 class WeeklyForecastList extends StatelessWidget {
   final WeeklyForecastDto weeklyForecast;
@@ -10,7 +10,6 @@ class WeeklyForecastList extends StatelessWidget {
   Widget build(BuildContext context) {
     final DateTime currentDate = DateTime.now();
     final TextTheme textTheme = Theme.of(context).textTheme;
-
     return SliverList(
       delegate: SliverChildBuilderDelegate(
         (context, index) {

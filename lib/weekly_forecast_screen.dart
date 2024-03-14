@@ -4,7 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:weather/data_source.dart';
-import 'package:weather/models.dart';
+import 'package:weather/models/forecast.dart';
 import 'package:weather/weather_sliver_app_bar.dart';
 import 'package:weather/weekly_forecast_list.dart';
 
