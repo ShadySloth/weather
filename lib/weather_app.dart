@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:weather/chart_screen.dart';
 import 'package:weather/weekly_forecast_screen.dart';
@@ -14,23 +13,26 @@ class WeatherApp extends StatelessWidget {
       theme: ThemeData.dark(),
       scrollBehavior: const ConstantScrollBehavior(),
       title: 'Weather',
-      home: const ChartScreen(),
+      routes: {
+        '/': (context) => const WeeklyForecastScreen(),
+        '/rainChart': (context) => const ChartScreen()
+      },
+      initialRoute: '/',
     );
   }
 }
-
 
 class ConstantScrollBehavior extends ScrollBehavior {
   const ConstantScrollBehavior();
 
   @override
   Widget buildScrollbar(
-      BuildContext context, Widget child, ScrollableDetails details) =>
+          BuildContext context, Widget child, ScrollableDetails details) =>
       child;
 
   @override
   Widget buildOverscrollIndicator(
-      BuildContext context, Widget child, ScrollableDetails details) =>
+          BuildContext context, Widget child, ScrollableDetails details) =>
       child;
 
   @override

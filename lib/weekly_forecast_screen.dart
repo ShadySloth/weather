@@ -33,14 +33,20 @@ class _WeeklyForecastScreenState extends State<WeeklyForecastScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.pushNamed(context, '/rainChart'),
+        child: const Text('Rain'),
+      ),
       body: StreamBuilder(
         stream: controller.stream,
         builder: (context, snapshot) {
           return RefreshIndicator(
-            onRefresh: () {  },
+            onRefresh: () {
+              return loadForecast();
+            },
             child: CustomScrollView(
               slivers: <Widget>[
-                WeatherSliverAppBar(onRefresh: loadForecast),
+                const WeatherSliverAppBar(),
                 if (snapshot.hasData)
                   WeeklyForecastList(weeklyForecast: snapshot.data!)
                 else if (snapshot.hasError)
